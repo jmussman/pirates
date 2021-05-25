@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/pirate-ship.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+div.header {
+    min-width: 800px;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+div.header div.title {
+    padding: 0;
+    margin-left: 10px;
+    height: 100px;
+    float: left;
+}
+
+div.header div.logo {
+    padding: 0;
+    margin-right: 10px;
+    height: 100px;
+    float: right;
+    text-align: bottom;
+}
+
+div.logo a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+}
+
+div.logo a:hover {
+    font-weight: bold;
+}
+
+span#sign-in {
+    display: inline;
+}
+
+span#sign-out {
+    display: none;
+}
+
+div.content {
+    min-height: calc(100vh - 155px);
+    min-width: 800px;
+    padding: 10px 10px 10px 45%; /* left-margin based on the ship in the page background */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: black;
+}
+
+div.footer {
+    padding-top: 10px;
+    background-color: black;
+    opacity: 0.5;
+    text-align: center;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    font-weight: bold;
+    color: white;
+}
+
+div.flex {
+    display: flex;
+    min-height: calc(100vh - 155px);    /* This tracks with div.content above */
+}
+
+div.menu {
+    margin: auto 0;
+}
+
+ul.menu {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48pt;
+}
+
+li.menuitem a {
+    text-decoration: none;
+    color: black;
+}
+
+li.menuitem a:hover {
+    color: navy;
+    font-weight: bold;
+}
+
+div.codeblock {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    opacity: 0.75;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    color: white;
+}
+
+div.codeblock h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    color: white;
+}
+
+div.error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72pt;
+    color: black;
+}
+
+div.error-small {
+    font-size: 24pt;
+}
+
+div.breadcrumbs {
+    display: block;
+    margin-top: 20px;
+    font-size: 16pt;
+}
+
+div.breadcrumbs a {
+    text-decoration: none;
+    color: black;
+}
+
+div.breadcrumbs a:hover {
+    color: navy;
+    font-weight: bold;
+}
+
+div.content table {
+    margin-top: 30px;
+    width: calc(100% - 20px);
+    border-collapse: collapse;
+    background-color: white;
+}
+
+div.content table th, td {
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+}
+
+div.content table th {
+    background-color: tan;
+    color: black;
+}
+
+div.content table td.align-right {
+    text-align: right;
+}
