@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- index.html
+    Copyright © 2021 Joel Mussman. All rights reserved.
+
+    This is a single-page application and the index.html wraps the content with the header
+    and footer.
+-->
+<html>
+    <head>
+        <title>Pirates</title>
+        <script src="main_bundle.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+                <a href="javascript: history.pushState({}, '', '/');"><img src="assets/images/title.png" /></a>
+            </div>
+            <div class="logo">
+                <span id="sign-in"><a href="javascript: history.pushState({}, '', '/sign-in');">Welcome aboard!</a></span>
+                <span id="sign-out"><a href="javascript: history.pushState({}, '', '/sign-out');">Walk the plank!</a></span>
+                <img src="assets/images/jolly-roger-black-square-100.png" style="height: 75px; margin-top: 12px;" />
+            </div>
+        </div>
+        <div class="content">
+        </div>
+        <div class="footer">
+            Copyright &copy; 2021 Joel Mussman. All rights reserved. Background image by Robert Pittman, licensed under CC BY-ND 2.0. <!-- https://search.creativecommons.org/photos/f8cf12f1-6744-46e9-9cbd-6371d1d9c8d0 -->
+        </div>
+    </body>
+</html>
