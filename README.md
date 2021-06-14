@@ -1,6 +1,6 @@
 ![](.common/joels-private-stock.png?raw=true)
 
-# Pirates: an OAuth/OIDC Adventure in Client-Side Programs
+# Pirates: a Client-Side OAuth/OIDC Adventure
 
 ## Overview
 
