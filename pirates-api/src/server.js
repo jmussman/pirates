@@ -4,6 +4,6 @@
 // Entry point into the web service.
 //
 
-import router from 'main/router';
+import router from 'main/serverController';
 
-router();
+serverController();

@@ -12,7 +12,7 @@ import express from 'express';
 import { apiAudience, apiPort } from 'main/config';
 import { validate } from 'authorization/token';
 
-const router = () => {
+const serverController = () => {
 
     const app = express();
 
@@ -67,4 +67,4 @@ const router = () => {
     app.listen(apiPort)
 }
 
-export default router;
+export default serverController;
