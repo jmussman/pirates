@@ -87,17 +87,17 @@ Once the application has an access token it can use it to authorize requests to 
 
 If you have security concerns consider these points:
 
-1. All client communication must be TLS encrypted (HTTPS), except for development applications in the http://localhost domain.
-1. The user is being authenticated, not the application.
+* All client communication must be TLS encrypted (HTTPS), except for development applications in the http://localhost domain.
+* The user is being authenticated, not the application.
 We have minimal concerns about authenticating the application (see the next point).
-1. The identity provider will only accept and redirect the user to a registered URI for the second part of the flow,
+* The identity provider will only accept and redirect the user to a registered URI for the second part of the flow,
 so it has to be the application that receives the authorization code.
 A fake application could initiate the flow, but without the verifier the true application cannot complete it,
 so what is the point to do that?
-1. The client ID does not need to be protected because of the previous points.
-1. A client secret is not necessary because PKCE is used to ensure same client is completing the second part of the flow.
-1. The authorization code eliminates the problem of token leakage by someone seeing the browser address bar or looking at the browser history.
-1. Even if malware could find the verifier and catch the authorization code in the browser redirect there is a very,
+* The client ID does not need to be protected because of the previous points.
+* A client secret is not necessary because PKCE is used to ensure same client is completing the second part of the flow.
+* The authorization code eliminates the problem of token leakage by someone seeing the browser address bar or looking at the browser history.
+* Even if malware could find the verifier and catch the authorization code in the browser redirect there is a very,
 very short window of opportunity to beat the application to the tokens.
 No solution is perfect, the goal is to minimize the risk as much as possible and this flow does it very well.
 
