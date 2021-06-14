@@ -8,7 +8,7 @@ Managing user authentication and API authorization is a fundamental goal in sing
 OAuth and OpenID Connect are the answer!
 Pirates is a simple, clean single-page application to demonstrate decoupling identity from an application
 by adding the functionality of an identity provider (IdP) with federated (shared and trusted) user
-authentication across multiple applications
+authentication across multiple applications.
 
 If you are trying to demonstrate to a group how to do this, Pirates provides a solution and the foundation for an
 interactive demonstration to do this.
