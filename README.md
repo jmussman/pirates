@@ -20,7 +20,7 @@ contribute to [my coffee fund](#mycoffeefund) and contact me at mailto:joelmussm
 Pirates is built using basic JavaScript with fundamental REST calls
 to clearly explain and demonstrate how OpenID Connect authentication and OAuth authorization work:
 
-![](.common/auth+auth-800x354.png)
+![](.common/auth+auth.png)
 
 There are two pieces to *Pirates*:
 a single-page web application (SPA) that interfaces with the user and a web service (API) that the SPA connects to.
@@ -92,7 +92,7 @@ If you have security concerns consider these points:
 We have minimal concerns about authenticating the application (see the next point).
 * The identity provider will only accept and redirect the user to a registered URI for the second part of the flow,
 so it has to be the application that receives the authorization code.
-A fake application could initiate the flow, but without the verifier the true application cannot complete it,
+A fake application could initiate the flow but without the verifier the true application cannot complete it,
 so what is the point to do that?
 * The client ID does not need to be protected because of the previous points.
 * A client secret is not necessary because PKCE is used to ensure same client is completing the second part of the flow.
