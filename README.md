@@ -1,14 +1,24 @@
 ![](.common/joels-private-stock.png?raw=true)
 
-# Pirates (an OAuth/OIDC Adventure)
+# Pirates: an OAuth/OIDC Adventure in Client-Side Programs
 
 ## Overview
 
-The purpose of Pirates is to demonstrate decoupling identity from an application, and adding the functionality of
-an identity provider (IdP) and federated (shared and trusted) user authentication across multiple
-applications!
+Managing user authentication and API authorization is a fundamental goal in single-page and native client-side applications,
+OAuth and OpenID Connect are the answer!
+Pirates is a simple, clean single-page application to demonstrate decoupling identity from an application
+by adding the functionality of an identity provider (IdP) with federated (shared and trusted) user
+authentication across multiple applications
 
-Pirates is built using basic JavaScript with fundamental REST calls to clearly explain and demonstrate how OpenID Connect authentication and OAuth authorization work:
+If you are trying to demonstrate to a group how to do this, Pirates provides a solution and the foundation for an
+interactive demonstration to do this.
+If you are looking for a clean example to follow, Pirates implements a vendor-neutral
+OAuth Authorization Code Flow with PKCE (Proof Key Code Exchange) to demonstrate how authentication and authorization work.
+A brief overview of the application is below, detailed topics and lab/demo instructions are in the associated guide:
+contribute to [my coffee fund](#mycoffeefund) and contact me at mailto:joelmussman@gmail.com and I'll give you a copy!
+
+Pirates is built using basic JavaScript with fundamental REST calls
+to clearly explain and demonstrate how OpenID Connect authentication and OAuth authorization work:
 
 ![](.common/auth+auth-800x354.png)
 
@@ -48,8 +58,8 @@ and then show the service responds to the request for /treasure.
 
 ### Authorization Code Flow with PCKE
 
-The application uses (or will use after the demo) the OAuth *Authorization Code Flow with PCKE* (proof-key code exchange) to authenticate the
-user and get the ID token to identify the user and the access token to authorize requests to the API:
+The application uses (or will use after the demo) the OAuth *Authorization Code Flow with PCKE* (Proof Key Code Exchange) to authenticate the
+user and receive an ID token to identify the user and an access token to authorize requests to the API:
 
 ![](.common/oauth-auth-code-pkce.png)
 
@@ -317,13 +327,16 @@ The authentication function in IdpConnection will always set a new verifier befo
 authentication flow to reduce the window of opportunity for malware to find the right one to a minimum.
 
 <a name="Configuration"></a>
-
 ## Project Configuration
 
 Knowledge of GitHub, JavaScript (ES6+), NodeJS, Node packages, webpack, and an identity provider such as Okta or Auth0 is required.
 The ability to configure the identity provider is presumed.
 
-If you just want to review a functioning copy of the application without configuring an IdP, these two tenants are available. They will work with the login names defined in the [Pirates of the Caribbean](https://github.com/jmussman/piratesofthecaribbean) project and the password "P!rates17". They are locked down, you can't get into them or change the passwords of any of the users, and the users won't lock out. You can use them for authentication and access tokens *IF* you do not change the application and API URLs:
+If you just want to review a functioning copy of the application without configuring an IdP, these two tenants are available.
+They will work with the login names defined in the [Pirates of the Caribbean](https://github.com/jmussman/piratesofthecaribbean)
+project and the password "P!rates17".
+They are locked down, you can't get into them or change the passwords of any of the users, and the users won't lock out.
+You can use them for authentication and access tokens *IF* you do not change the application and API URLs:
 
 #### Okta
 
@@ -376,9 +389,11 @@ Start the API and check it by browsing to the ships endpoint: http://localhost:8
 Launch the application, and open it in a browser: http://localhost:9000 by default.
 If you are on the master branch and everything is configured correctly it will work.
 
-For demonstrations follow the topics and instructions in the associated guide: contact me at mailto:joelmussman@gmail.com to get a copy for a small contribution to my coffee fund.
+For demonstrations follow the detailed topics and instructions in the associated guide:
+contribute to [my coffee fund](#mycoffeefund) and contact me at mailto:joelmussman@gmail.com and I'll give you a copy!
 
-## Supporting Me
+<a name="mycoffeefund"></a>
+## My Coffee Fund
 
 Since I give this away for free, and if you would like to keep seeing more things like this, then please consider
 a contribution to *Joel's Coffee Fund* at **Smallrock** to help keep the good stuff coming :)<br />
