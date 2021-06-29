@@ -9,6 +9,9 @@ module.exports = {
 	devtool: 'inline-source-map', // It is recommended to take this out for production build.
 
     entry: './src/index.js',
+    experiments: {
+        topLevelAwait: true
+    },
 	target: 'web',
 	module: {
 		rules: [

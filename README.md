@@ -224,6 +224,14 @@ The controller decides which view logic should be used or combined together to b
                     .append($('<h1>').append('ID Token'))
                     .append(idTokenPayload));
 
+#### Authorization Server Endpoints
+
+The authorization server endpoints are retrieved dynamically from the *.well-known/openid-configuration* discovery endpoint at the authorization server.
+The endpoints are used in the IdpConnection subclasses to build the URLs necessary for the calling the authorization server.
+The code to make the call to retrieve the discover document is in the IdpConnection super-class as the getDiscovery method.
+The config.js module uses the getDiscovery method from the IdpConnection subclass instance to retrieve the discovery document as a JavaScript object, which
+is then exported and shared by the IdpConnection module.
+The retrieval is asynchronous, so config.js depends on the *topLevelAwait* experimental flag set in the webpack-config.js file for both modules.
 
 #### Authentication and Authorization Logic
 

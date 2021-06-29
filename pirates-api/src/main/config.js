@@ -2,16 +2,23 @@
 // Copyright © 2021 Joel Mussman. All rights reserved.
 //
 
-import OktaAdapter from 'authorization/OktaAdapter';
+// Idp configuration.
+//
+
+import { idpConnection } from 'authorization/Auth0Adapter';
 
 const authorizationServerUri = 'https://dev-XXXXXXXX.okta.com/oauth2/ausXXXXXXXXXXXXXXXXX/v1';
-const idpConnection = new OktaAdapter();
 const tokenPermissionsClaim = 'scp';
 
 // Declarations of endpoints and state in this application.
 //
 
-const apiPort = 8000;                                                      // Service port.
-const apiAudience = `http://localhost:${apiPort}`;                            // The audience for the access token (matches IdP configuration).
+const apiPort = 8000;                               // Service port.
+const apiAudience = `http://localhost:${apiPort}`;  // The audience for the access token (matches IdP configuration).
 
-export { apiAudience, apiPort, authorizationServerUri, idpConnection, tokenPermissionsClaim };
+// Get the OIDC discovery document.
+//
+
+const oidcDiscovery = await idpConnection.getDiscovery(`${authorizationServerUri}/.well-known/openid-configuration`);
+
+export { apiAudience, apiPort, idpConnection, oidcDiscovery, tokenPermissionsClaim };

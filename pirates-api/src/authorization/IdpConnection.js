@@ -5,7 +5,16 @@
 // sub-class to define the URL to get the keys, while the bulk of the work remains in this class.
 //
 
+import fetch from 'node-fetch';
+
 class IdpConnection {
+
+    async getDiscovery(discoveryUri) {
+
+        const response = await fetch(discoveryUri);
+            
+        return await response.json(response);
+    }
 
     async publicKeys() {
 

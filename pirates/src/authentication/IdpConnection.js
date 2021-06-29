@@ -70,6 +70,21 @@ class IdpConnection {
         }
     }
 
+    async getDiscovery(discoveryUri) {
+
+        const ajaxConfig = {
+
+            type: 'GET',
+            url: discoveryUri,
+            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            dataType: 'json',
+            crossDomain: true,
+            cache: true
+        }
+
+        return await $.ajax(ajaxConfig);
+    }
+
     getTokens() {
 
         // This method returns an array of the two tokens after authentication: [ idToken, accessToken ].

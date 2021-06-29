@@ -7,7 +7,7 @@
 
 import fetch from 'node-fetch';
 
-import { authorizationServerUri } from 'main/config';
+import { oidcDiscovery } from 'main/config';
 import IdpConnection from 'authorization/IdpConnection';
 
 class Auth0Adapter extends IdpConnection {
@@ -16,10 +16,11 @@ class Auth0Adapter extends IdpConnection {
 
         // Load and return the public keys from the IdP.
 
-        const response = await fetch(`${authorizationServerUri}/.well-known/jwks.json`);
+        const response = await fetch(oidcDiscovery.jwks_uri);
         
         return await response.json(response);
     }
 }
 
-export default Auth0Adapter;
+var idpConnection = new Auth0Adapter;
+export { idpConnection };

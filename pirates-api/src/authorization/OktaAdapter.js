@@ -7,7 +7,7 @@
 
 import fetch from 'node-fetch';
 
-import { authorizationServerUri } from 'main/config';
+import { oidcDiscovery } from 'main/config';
 import IdpConnection from 'authorization/IdpConnection';
 
 class OktaAdapter extends IdpConnection {
@@ -16,10 +16,11 @@ class OktaAdapter extends IdpConnection {
 
         // Load and return the public keys from the IdP.
 
-        const response = await fetch(`${authorizationServerUri}/keys`);
+        const response = await fetch(oidcDiscovery.jwks_uri);
         
         return await response.json(response);
     }
 }
 
-export default OktaAdapter;
+var idpConnection = new OktaAdapter;
+export { idpConnection };

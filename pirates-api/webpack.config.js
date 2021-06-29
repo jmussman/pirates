@@ -8,11 +8,15 @@ const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-	entry: './src/server.js',
-    externals: [ nodeExternals() ],
-	target: 'web',
 	mode: 'development', // Change to 'production' for production build.
 	devtool: 'inline-source-map', // It is recommended to take this out for production build.
+    
+	entry: './src/server.js',
+    experiments: {
+        topLevelAwait: true
+    },
+    externals: [ nodeExternals() ],
+	target: 'web',
 	module: {
 		rules: [
 			{
