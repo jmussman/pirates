@@ -7,7 +7,7 @@
 
 import { idpConnection } from 'authentication/Auth0Adapter';
 
-const authorizationServerUri = 'https://dev-XXXXXXXX.okta.com/oauth2/ausXXXXXXXXXXXXXXXXX/v1';
+const authorizationServerUri = 'https://dev-XXXXXXXX.okta.com/oauth2/ausXXXXXXXXXXXXXXXXX';
 const clientId = 'XXXXXXXXXXXXXXXXXXX';
 const tokenPermissionsClaim = 'permissions';
 

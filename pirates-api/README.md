@@ -228,8 +228,8 @@ The controller decides which view logic should be used or combined together to b
 
 The authorization server endpoints are retrieved dynamically from the *.well-known/openid-configuration* discovery endpoint at the authorization server.
 The endpoints are used in the IdpConnection subclasses to build the URLs necessary for the calling the authorization server.
-The code to make the call to retrieve the discover document is in the IdpConnection super-class as the getDiscovery method.
 
+The code to make the call to retrieve the discover document is in the IdpConnection super-class as the getDiscovery method.
 The config.js module uses the getDiscovery method from the IdpConnection subclass instance to retrieve the discovery document as a JavaScript object, which
 is then exported and shared by the IdpConnection module.
 The retrieval is asynchronous, so config.js depends on the *topLevelAwait* experimental flag set in the webpack-config.js file for both modules.
@@ -356,14 +356,14 @@ You can use them for authentication and access tokens *IF* you do not change the
 
 #### Okta
 
-* Client id: 0oasqz7cmOGojO08G5d6
 * Authorization server URI: https://dev-77167726.okta.com/oauth2/aussqx0ajlGLJ20iU5d6
+* Client id: 0oasqz7cmOGojO08G5d6
 * Access token permissions claim: "scp"
 
 #### Auth0
 
-* Client id: 1RO60K1qAtexVy8PgKogLXlIsHLwGHw7
 * Authorization server URI: https://dev-t-i2cj7t.us.auth0.com
+* Client id: 1RO60K1qAtexVy8PgKogLXlIsHLwGHw7
 * Access token permissions claim: "permissions"
 
 ### Configuring an Identity Provider

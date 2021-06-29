@@ -7,7 +7,7 @@
 
 import { idpConnection } from 'authorization/Auth0Adapter';
 
-const authorizationServerUri = 'https://dev-XXXXXXXX.okta.com/oauth2/ausXXXXXXXXXXXXXXXXX/v1';
+const authorizationServerUri = 'https://dev-XXXXXXXX.okta.com/oauth2/ausXXXXXXXXXXXXXXXXX';
 const tokenPermissionsClaim = 'scp';
 
 // Declarations of endpoints and state in this application.
